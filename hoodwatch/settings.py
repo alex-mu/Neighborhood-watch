@@ -14,6 +14,7 @@ from distutils.command.upload import upload
 from ensurepip import bootstrap
 from pathlib import Path
 import os
+from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hoodwatch',
+    'hood',
     'bootstrap',
     'crispy_forms',
     'pyuploadcare.dj',
